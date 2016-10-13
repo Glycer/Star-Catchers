@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: a60cbb1d7f54f0949978adf2ecf9d3e9
+timeCreated: 1475195953
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: C1
+    100002: C2
+    100004: Chasm
+    100006: CubeBase
+    100008: F1
+    100010: F2
+    100012: Flat
+    100014: Floating
+    100016: I1
+    100018: I2
+    100020: I3
+    100022: Island
+    100024: PlateauLeft
+    100026: PlateauMiddle
+    100028: //RootNode
+    100030: SlopeDown
+    100032: SlopeUp
+    400000: C1
+    400002: C2
+    400004: Chasm
+    400006: CubeBase
+    400008: F1
+    400010: F2
+    400012: Flat
+    400014: Floating
+    400016: I1
+    400018: I2
+    400020: I3
+    400022: Island
+    400024: PlateauLeft
+    400026: PlateauMiddle
+    400028: //RootNode
+    400030: SlopeDown
+    400032: SlopeUp
+    2300000: C1
+    2300002: C2
+    2300004: CubeBase
+    2300006: F1
+    2300008: F2
+    2300010: Flat
+    2300012: I1
+    2300014: I2
+    2300016: I3
+    2300018: PlateauLeft
+    2300020: PlateauMiddle
+    2300022: SlopeDown
+    2300024: SlopeUp
+    3300000: C1
+    3300002: C2
+    3300004: CubeBase
+    3300006: F1
+    3300008: F2
+    3300010: Flat
+    3300012: I1
+    3300014: I2
+    3300016: I3
+    3300018: PlateauLeft
+    3300020: PlateauMiddle
+    3300022: SlopeDown
+    3300024: SlopeUp
+    4300000: Flat
+    4300002: SlopeUp
+    4300004: CubeBase
+    4300006: PlateauMiddle
+    4300008: I1
+    4300010: I2
+    4300012: I3
+    4300014: SlopeDown
+    4300016: PlateauLeft
+    4300018: C1
+    4300020: C2
+    4300022: F2
+    4300024: F1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
