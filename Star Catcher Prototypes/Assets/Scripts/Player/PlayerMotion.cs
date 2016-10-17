@@ -34,6 +34,28 @@ public class PlayerMotion : MonoBehaviour {
 	void Update () {
 		//Left-Right motion control
 		ChangeDirection();
+
+		RunControl ();
+		JumpControl ();
+		SprintControl ();
+	}
+
+	//Re-enables jumping after hitting the ground
+	void OnCollisionEnter()
+	{
+		isJumping = false;
+		jumpScript.enabled = true;
+	}
+
+	//Reset to beginning
+	void ResetPos()
+	{
+		transform.position = initPos;
+	}
+
+	//Funtions for each motion control, as tied to different key inputs, to run in Update
+	void RunControl()
+	{
 		transform.Translate (Input.GetAxis ("Horizontal") * speed * Time.deltaTime, 0, 0);
 
 		if (!Input.GetKey ("left") && !Input.GetKey("right")) {
@@ -41,8 +63,10 @@ public class PlayerMotion : MonoBehaviour {
 		} else {
 			anim.SetBool ("IsRunning", true);
 		}
+	}
 
-		//Jump control
+	void JumpControl()
+	{
 		if (Input.GetKeyDown (KeyCode.Space) && jumpScript.enabled == true)
 		{
 			if (!isJumping) {
@@ -54,24 +78,14 @@ public class PlayerMotion : MonoBehaviour {
 				jumpScript.enabled = false;
 			}
 		}
+	}
 
+	void SprintControl()
+	{
 		if (Input.GetKeyDown (KeyCode.LeftShift)) {
 			StartSprint ();
 		} else if (Input.GetKeyUp (KeyCode.LeftShift)) {
 			ResetSprint ();
 		}
-	}
-
-	//Re-enables jumping after hitting the ground
-	void OnCollisionStay()
-	{
-		isJumping = false;
-		jumpScript.enabled = true;
-	}
-
-	//Reset to beginning
-	void ResetPos()
-	{
-		transform.position = initPos;
 	}
 }
