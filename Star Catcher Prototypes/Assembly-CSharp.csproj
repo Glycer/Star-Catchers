@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Environment\SectionData.cs" />
      <Compile Include="Assets\Scripts\Environment\SpawnObstacle.cs" />
      <Compile Include="Assets\Scripts\Player\FlipChar.cs" />
+     <Compile Include="Assets\Scripts\Player\Idle.cs" />
      <Compile Include="Assets\Scripts\Player\JumpScript.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMotion.cs" />
      <Compile Include="Assets\Scripts\Player\Sprint.cs" />

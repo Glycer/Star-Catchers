@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 45b5ed9a3bd5282448248a5dd5939118
-timeCreated: 1476596724
+timeCreated: 1476816584
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -67,7 +67,7 @@ TextureImporter:
         width: 562.3333
         height: 460
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -75,12 +75,12 @@ TextureImporter:
       name: Rabbit Idle Blink_1
       rect:
         serializedVersion: 2
-        x: 562
+        x: 570
         y: 0
-        width: 562.3333
+        width: 562
         height: 460
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -88,12 +88,12 @@ TextureImporter:
       name: Rabbit Idle Blink_2
       rect:
         serializedVersion: 2
-        x: 1124
+        x: 1140
         y: 0
-        width: 562.3333
+        width: 562
         height: 460
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -101,12 +101,12 @@ TextureImporter:
       name: Rabbit Idle Blink_3
       rect:
         serializedVersion: 2
-        x: 1686
+        x: 1710
         y: 0
-        width: 562.3333
+        width: 562
         height: 460
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -114,12 +114,12 @@ TextureImporter:
       name: Rabbit Idle Blink_4
       rect:
         serializedVersion: 2
-        x: 2248
+        x: 2280
         y: 0
-        width: 562.3333
+        width: 562
         height: 460
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -127,12 +127,12 @@ TextureImporter:
       name: Rabbit Idle Blink_5
       rect:
         serializedVersion: 2
-        x: 2810
+        x: 2816
         y: 0
-        width: 562.3333
+        width: 558
         height: 460
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
