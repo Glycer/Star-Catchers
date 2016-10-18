@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class Cycler : MonoBehaviour {
+
+	public static Action Cycle;
 
 	const float FLOOR_DEPTH = -4f;
 	const float INIT_DISTANCE = 27.6f;
@@ -24,6 +27,7 @@ public class Cycler : MonoBehaviour {
 		cyclePieces = new List<SectionData> ();
 		SectionData.SectionCycle += CycleActionHandler;
 		CameraMotion.ResetAll += ResetCycler;
+		Cycle += CycleFront;
 
 		nextPos.x = distance;
 		nextPos.y = FLOOR_DEPTH;
@@ -48,10 +52,10 @@ public class Cycler : MonoBehaviour {
 		cyclePieces.Add(col.GetComponent<SectionData>());
 	}
 
-	void Cycle()
+	void CycleFront()
 	{
 		//Set variables
-		rand = Random.Range (0, cyclePieces.Count);
+		rand = UnityEngine.Random.Range (0, cyclePieces.Count);
 		SectionData _newPiece = cyclePieces [rand];
 		Transform obstacleSpawner = forwardEdge.transform.FindChild ("ObstacleSpawner");
 

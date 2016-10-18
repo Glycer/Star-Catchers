@@ -21,6 +21,7 @@ public class SectionData : MonoBehaviour {
 
 	public static Action<SectionData> SectionCycle;
 	public bool canCycle;
+	public bool canCycleInit;
 
 	public int length;
 
@@ -40,7 +41,7 @@ public class SectionData : MonoBehaviour {
 	{
 		transform.position = resetPos;
 
-		if (resetPos.y > -10) {
+		if (canCycleInit == false) {
 			canCycle = false;
 		} else {
 			canCycle = true;
