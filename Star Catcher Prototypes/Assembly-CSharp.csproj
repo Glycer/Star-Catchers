@@ -45,17 +45,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Enemy\JumpPoint.cs" />
      <Compile Include="Assets\Scripts\Enemy\WolfAI.cs" />
-     <Compile Include="Assets\Scripts\Environment\BackGroundFloors.cs" />
-     <Compile Include="Assets\Scripts\Environment\CameraMotion.cs" />
-     <Compile Include="Assets\Scripts\Environment\ClearEffect.cs" />
-     <Compile Include="Assets\Scripts\Environment\Cycler.cs" />
-     <Compile Include="Assets\Scripts\Environment\Cycler2.cs" />
-     <Compile Include="Assets\Scripts\Environment\KillSwitch.cs" />
-     <Compile Include="Assets\Scripts\Environment\LightningBump.cs" />
-     <Compile Include="Assets\Scripts\Environment\RotateObstacle.cs" />
-     <Compile Include="Assets\Scripts\Environment\SectionData.cs" />
-     <Compile Include="Assets\Scripts\Environment\SpawnObstacle.cs" />
+     <Compile Include="Assets\Scripts\Environment\Cycling\BackGroundFloors.cs" />
+     <Compile Include="Assets\Scripts\Environment\Cycling\CameraMotion.cs" />
+     <Compile Include="Assets\Scripts\Environment\Cycling\ClearEffect.cs" />
+     <Compile Include="Assets\Scripts\Environment\Cycling\Cycler.cs" />
+     <Compile Include="Assets\Scripts\Environment\Cycling\Cycler2.cs" />
+     <Compile Include="Assets\Scripts\Environment\Cycling\KillSwitch.cs" />
+     <Compile Include="Assets\Scripts\Environment\Cycling\LightningBump.cs" />
+     <Compile Include="Assets\Scripts\Environment\Cycling\RotateObstacle.cs" />
+     <Compile Include="Assets\Scripts\Environment\Cycling\SectionData.cs" />
+     <Compile Include="Assets\Scripts\Environment\Cycling\SpawnObstacle.cs" />
+     <Compile Include="Assets\Scripts\Environment\Stars\Collection.cs" />
+     <Compile Include="Assets\Scripts\Environment\Stars\StarBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Environment\Stars\TrackStars.cs" />
      <Compile Include="Assets\Scripts\Player\FlipChar.cs" />
      <Compile Include="Assets\Scripts\Player\Idle.cs" />
      <Compile Include="Assets\Scripts\Player\JumpScript.cs" />
