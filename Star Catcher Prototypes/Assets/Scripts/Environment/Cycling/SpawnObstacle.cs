@@ -10,11 +10,6 @@ public class SpawnObstacle : MonoBehaviour {
 	void Start () {
 		CameraMotion.ResetAll += CleanUp;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	public void Spawn(List<GameObject> obstacles)
 	{

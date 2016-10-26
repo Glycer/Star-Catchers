@@ -6,6 +6,7 @@ public class Cycler2 : MonoBehaviour {
 
 	void OnTriggerEnter()
 	{
-		BackGroundFloors.CycleMidGround ();
+		if (BackGroundFloors.CycleMidGround != null)
+			BackGroundFloors.CycleMidGround ();
 	}
 }

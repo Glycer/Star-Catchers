@@ -23,6 +23,7 @@ public class Sprint : MonoBehaviour {
 
 		PlayerMotion.StartSprint += Boost;
 		PlayerMotion.ResetSprint += Stop;
+		LevelTimer.EndLevel += Unsubscribe;
 	}
 
 	void Boost()
@@ -65,5 +66,11 @@ public class Sprint : MonoBehaviour {
 	void ResetSpeed()
 	{
 		GetComponent<PlayerMotion> ().speed = boostSpeed;
+	}
+
+	void Unsubscribe()
+	{
+		PlayerMotion.StartSprint -= Boost;
+		PlayerMotion.ResetSprint -= Stop;
 	}
 }

@@ -30,6 +30,7 @@ public class SectionData : MonoBehaviour {
 	void Start()
 	{
 		CameraMotion.ResetAll += ResetFloor;
+		LevelTimer.EndLevel += Unsubscribe;
 		resetPos = transform.position;
 
 		if (canCycle) {
@@ -50,5 +51,10 @@ public class SectionData : MonoBehaviour {
 		if (canCycle) {
 			SectionCycle (this);
 		}
+	}
+
+	void Unsubscribe()
+	{
+		CameraMotion.ResetAll -= ResetFloor;
 	}
 }

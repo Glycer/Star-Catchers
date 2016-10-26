@@ -22,6 +22,7 @@ public class PlayerMotion : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		CameraMotion.ResetAll += ResetPos;
+		LevelTimer.EndLevel += Unsubscribe;
 
 		anim = GetComponent<Animator> ();
 		initPos = transform.position;
@@ -33,7 +34,8 @@ public class PlayerMotion : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Left-Right motion control
-		ChangeDirection();
+		if (ChangeDirection != null)
+			ChangeDirection();
 
 		RunControl ();
 		JumpControl ();
@@ -87,5 +89,10 @@ public class PlayerMotion : MonoBehaviour {
 		} else if (Input.GetKeyUp (KeyCode.LeftShift)) {
 			ResetSprint ();
 		}
+	}
+
+	void Unsubscribe()
+	{
+		CameraMotion.ResetAll -= ResetPos;
 	}
 }

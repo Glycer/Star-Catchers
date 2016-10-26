@@ -17,6 +17,7 @@ public class CameraMotion : MonoBehaviour {
 		Screen.SetResolution (1000, 400, false);
 		resetPos = transform.position;
 		ResetAll += ResetCam;
+		LevelTimer.EndLevel += Unsubscribe;
 	}
 
 	// Update is called once per frame
@@ -28,5 +29,10 @@ public class CameraMotion : MonoBehaviour {
 	void ResetCam()
 	{
 		transform.position = resetPos;
+	}
+
+	void Unsubscribe()
+	{
+		ResetAll -= ResetCam;
 	}
 }

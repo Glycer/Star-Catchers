@@ -28,6 +28,7 @@ public class Cycler : MonoBehaviour {
 		SectionData.SectionCycle += CycleActionHandler;
 		CameraMotion.ResetAll += ResetCycler;
 		Cycle += CycleFront;
+		LevelTimer.EndLevel += Unsubscribe;
 
 		nextPos.x = distance;
 		nextPos.y = FLOOR_DEPTH;
@@ -83,5 +84,12 @@ public class Cycler : MonoBehaviour {
 		cyclePieces.Clear ();
 		forwardEdge = defaultEdge;
 		nextPos.x = INIT_DISTANCE;
+	}
+
+	void Unsubscribe()
+	{
+		SectionData.SectionCycle -= CycleActionHandler;
+		CameraMotion.ResetAll -= ResetCycler;
+		Cycle -= CycleFront;
 	}
 }

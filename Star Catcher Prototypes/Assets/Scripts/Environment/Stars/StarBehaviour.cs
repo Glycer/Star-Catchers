@@ -6,7 +6,15 @@ public class StarBehaviour : MonoBehaviour {
 	const int LIFESPAN = 5;
 
 	// Use this for initialization
-	void Start () {		
+	void Start () {
 		Destroy (gameObject, LIFESPAN);
+	}
+
+	void OnTriggerEnter()
+	{
+		if (Collection.CollectStar != null)
+			Collection.CollectStar ();
+
+		Destroy (gameObject);
 	}
 }

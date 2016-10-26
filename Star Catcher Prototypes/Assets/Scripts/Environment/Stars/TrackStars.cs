@@ -14,12 +14,13 @@ public class TrackStars : MonoBehaviour {
 
 		Collection.CollectStar += IncrementStars;
 		Collection.LoseStars += LoseStars;
+		LevelTimer.EndLevel += Unsubscribe;
 	}
 
 	void IncrementStars()
 	{
 		starsNum++;
-		starsNumTxt.text = starsNum.ToString ();
+		UpdateStars ();
 	}
 
 	void LoseStars()
@@ -27,6 +28,19 @@ public class TrackStars : MonoBehaviour {
 		int rand = Random.Range (1, starsNum / 2);
 
 		starsNum -= rand;
-		starsNumTxt.text = starsNum.ToString();
+		UpdateStars ();
+	}
+
+	void UpdateStars()
+	{
+		if (starsNumTxt != null) {
+			starsNumTxt.text = starsNum.ToString();
+		}
+	}
+
+	void Unsubscribe()
+	{
+		Collection.CollectStar -= IncrementStars;
+		Collection.LoseStars -= LoseStars;
 	}
 }

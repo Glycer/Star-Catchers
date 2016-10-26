@@ -9,18 +9,26 @@ public class FlipChar : MonoBehaviour {
 	void Start()
 	{
 		PlayerMotion.ChangeDirection += Flip;
+		LevelTimer.EndLevel += Unsubscribe;
 
 		sprite = GetComponent<SpriteRenderer> ();
 	}
 
 	void Flip()
 	{
-		if (Input.GetKeyDown ("left")) {
-			sprite.flipX = true;
-			facingX = -1;
-		} else if (Input.GetKeyDown ("right")) {
-			sprite.flipX = false;
-			facingX = 1;
+		if (GetComponent<SpriteRenderer> () != null) {
+			if (Input.GetKeyDown ("left")) {
+				sprite.flipX = true;
+				facingX = -1;
+			} else if (Input.GetKeyDown ("right")) {
+				sprite.flipX = false;
+				facingX = 1;
+			}
 		}
+	}
+
+	void Unsubscribe()
+	{
+		PlayerMotion.ChangeDirection -= Flip;
 	}
 }
