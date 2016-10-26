@@ -13,13 +13,6 @@ public class BackGroundFloors : MonoBehaviour {
 	public List<GameObject> nonCyclableSections;
 	public List<GameObject> allSections;
 
-	public Color cloudCol = new Color(0, 0, 0);
-	public Color cloudColIncrement;
-	private Color cloudColTarget = new Color (.16f, .35f, .55f);
-	private float red;
-	private float green;
-	private float blue;
-
 	private int rand;
 	private GameObject tempObj;
 
@@ -31,11 +24,6 @@ public class BackGroundFloors : MonoBehaviour {
 		CameraMotion.ResetAll += Reset;
 		CycleMidGround += Cycle;
 		LevelTimer.EndLevel += Unsubscribe;
-
-		red = cloudColTarget.r / LevelTimer.LEVEL_DURATION;
-		green =  cloudColTarget.g / LevelTimer.LEVEL_DURATION;
-		blue =  cloudColTarget.b / LevelTimer.LEVEL_DURATION;
-		cloudColIncrement = new Color (red, green, blue);
 
 		basePos = new Vector3 (-20, -20, 0);
 		tempPos = new Vector3 (-41, -1, 9.5f);
@@ -49,8 +37,7 @@ public class BackGroundFloors : MonoBehaviour {
 		rand = UnityEngine.Random.Range(0, cyclableSections.Count);
 		GameObject _newPiece = cyclableSections [rand];
 		GameObject _backEdge = nonCyclableSections [0];
-		if (transform != null)
-			_newPiece.transform.parent = transform;
+		_newPiece.transform.parent = transform;
 
 		//Switch pieces on lists
 		nonCyclableSections.Add(_newPiece);
@@ -82,7 +69,7 @@ public class BackGroundFloors : MonoBehaviour {
 	{
 		for (int i = 0; i < 4; i++) {
 			tempObj = Instantiate (allSections[i]);
-			tempObj.GetComponent<SpriteRenderer> ().color = cloudCol;
+			tempObj.GetComponent<SpriteRenderer> ().color = GetComponent<CloudCol>().cloudCol;
 			nonCyclableSections.Add (tempObj);
 
 			tempObj.transform.parent = transform;
@@ -92,7 +79,7 @@ public class BackGroundFloors : MonoBehaviour {
 
 		for (int i = 4; i < 8; i++) {
 			tempObj = Instantiate (allSections[i]);
-			tempObj.GetComponent<SpriteRenderer> ().color = cloudCol;
+			tempObj.GetComponent<SpriteRenderer> ().color = GetComponent<CloudCol>().cloudCol;
 			cyclableSections.Add (tempObj);
 
 			tempObj.transform.parent = transform;

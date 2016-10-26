@@ -12,7 +12,7 @@ public class FadeToDawn : MonoBehaviour {
 	void Start () {
 		elapsedTime = 0;
 		sprite = GetComponent<SpriteRenderer> ();
-		tempCol = GetComponentInParent<BackGroundFloors>().cloudCol;
+		tempCol = GetComponentInParent<CloudCol>().cloudCol;
 
 		StartCoroutine (Fade());
 	}
@@ -21,7 +21,7 @@ public class FadeToDawn : MonoBehaviour {
 	{
 		while (elapsedTime <= LevelTimer.LEVEL_DURATION) {
 
-			tempCol += GetComponentInParent<BackGroundFloors>().cloudColIncrement;
+			tempCol += GetComponentInParent<CloudCol>().cloudColIncrement;
 			sprite.color = tempCol;
 
 			yield return new WaitForSeconds (1);

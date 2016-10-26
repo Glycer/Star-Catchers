@@ -18,7 +18,7 @@ public class UpdateCloudCol : MonoBehaviour {
 		while (elapsedTime <= LevelTimer.LEVEL_DURATION) {
 
 			tempCol = GetComponent<FadeToDawn>().tempCol;
-			GetComponentInParent<BackGroundFloors>().cloudCol = tempCol;
+			GetComponentInParent<CloudCol>().cloudCol = tempCol;
 
 			yield return new WaitForSeconds (1);
 			elapsedTime++;

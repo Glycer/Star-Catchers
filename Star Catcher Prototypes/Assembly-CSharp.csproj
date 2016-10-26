@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\Player\JumpScript.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMotion.cs" />
      <Compile Include="Assets\Scripts\Player\Sprint.cs" />
+     <Compile Include="Assets\Scripts\UI\CloudCol.cs" />
      <Compile Include="Assets\Scripts\UI\FadeToDawn.cs" />
      <Compile Include="Assets\Scripts\UI\LevelTimer.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
