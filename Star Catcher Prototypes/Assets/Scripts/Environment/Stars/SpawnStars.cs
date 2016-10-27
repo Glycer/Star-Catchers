@@ -3,7 +3,8 @@ using System.Collections;
 
 public class SpawnStars : MonoBehaviour {
 
-	const int MAX_SPAWN_DELAY = 3;
+	const float MIN_SPAWN_DELAY = 0.5f;
+	const float MAX_SPAWN_DELAY = 2.5f;
 
 	public GameObject[] stars;
 
@@ -28,7 +29,7 @@ public class SpawnStars : MonoBehaviour {
 
 		while (isGameRunning) {
 			randSpawner = Random.Range (0, spawners.Length);
-			randTime = Random.Range (.5f, MAX_SPAWN_DELAY); 
+			randTime = Random.Range (MIN_SPAWN_DELAY, MAX_SPAWN_DELAY); 
 
 			yield return new WaitForSeconds (randTime);
 			SpawnStar (spawners [randSpawner]);
@@ -38,8 +39,9 @@ public class SpawnStars : MonoBehaviour {
 	void SpawnStar(Transform spawner)
 	{
 		GameObject star = Instantiate (stars[0]);
+		float rand = Random.Range (0, spawner.GetComponent<FireStar>().forceRange.x);
 
 		star.transform.position = spawner.position;
-		star.GetComponent<Rigidbody> ().AddForce (spawner.GetComponent<FireStar>().forceRange);
+		star.GetComponent<Rigidbody> ().AddForce (rand, spawner.GetComponent<FireStar>().forceRange.y, 0);
 	}
 }

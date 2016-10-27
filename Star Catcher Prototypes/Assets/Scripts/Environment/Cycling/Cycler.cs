@@ -7,7 +7,7 @@ public class Cycler : MonoBehaviour {
 
 	public static Action Cycle;
 
-	const float FLOOR_DEPTH = -4f;
+	const float FLOOR_DEPTH = -5.5f;
 	const float INIT_DISTANCE = 27.6f;
 	const float LENGTH_MULTIPLIER = .3f;
 
