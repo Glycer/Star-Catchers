@@ -7,6 +7,6 @@ public class KillSwitch : MonoBehaviour {
 	void OnTriggerEnter()
 	{
 		CameraMotion.ResetAll();
-		//SceneManager.LoadScene("Prototype One");
+		Collection.LoseStars ();
 	}
 }

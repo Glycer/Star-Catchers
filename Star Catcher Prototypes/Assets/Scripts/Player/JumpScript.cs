@@ -4,7 +4,7 @@ using System.Collections;
 public class JumpScript : MonoBehaviour {
 
 	//Variables for jump control
-	private Vector3 jumpForce = new Vector3 (0, 500, 0);
+	private Vector3 jumpForce = new Vector3 (0, 550, 0);
 	private Animator anim;
 	private Vector3 nullForce = new Vector3(0, 0, 0);
 	private Rigidbody rigidBody;

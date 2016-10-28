@@ -8,6 +8,7 @@ public class LevelTimer : MonoBehaviour {
 
 	//public static Action TickTock;
 	public static Action EndLevel;
+	public static Action FadeOut;
 
 	public const float LEVEL_DURATION = 60;
 
@@ -37,7 +38,10 @@ public class LevelTimer : MonoBehaviour {
 	IEnumerator Tick()
 	{
 		while (elapsedTime <= LEVEL_DURATION) {
-			if (elapsedTime == LEVEL_DURATION) {
+			if (elapsedTime == LEVEL_DURATION - WhiteInOut.FADE_DURATION_OUT) {
+				FadeOut ();
+			}
+			else if (elapsedTime == LEVEL_DURATION) {
 				EndLevel ();
 				SceneManager.LoadScene ("Start Screen");
 			}

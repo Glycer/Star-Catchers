@@ -4,17 +4,18 @@ using UnityEngine.UI;
 
 public class TrackStars : MonoBehaviour {
 
-	private int starsNum = 0;
+	public int starsNum;
 	private Text starsNumTxt;
 
 	// Use this for initialization
 	void Start () {
-		starsNumTxt = GetComponent<Text> ();
-		starsNumTxt.text = starsNum.ToString();
-
 		Collection.CollectStar += IncrementStars;
 		Collection.LoseStars += LoseStars;
 		LevelTimer.EndLevel += Unsubscribe;
+
+		starsNumTxt = GetComponent<Text> ();
+		starsNumTxt.text = starsNum.ToString();
+		starsNum = 0;
 	}
 
 	void IncrementStars()
@@ -27,8 +28,10 @@ public class TrackStars : MonoBehaviour {
 	{
 		int rand = Random.Range (1, starsNum / 2);
 
-		starsNum -= rand;
-		UpdateStars ();
+		if (starsNum > 0) {
+			starsNum -= rand;
+			UpdateStars ();
+		}
 	}
 
 	void UpdateStars()

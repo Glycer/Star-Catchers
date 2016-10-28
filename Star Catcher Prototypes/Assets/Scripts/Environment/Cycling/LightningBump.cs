@@ -28,5 +28,8 @@ public class LightningBump : MonoBehaviour {
 		bumpForce.x = _colFacing.facingX * X_PUSH;
 		_colBody.velocity = zeroVelocity;
 		_colBody.AddForce (bumpForce);
+
+		//Take stars
+		Collection.LoseStars();
 	}
 }
