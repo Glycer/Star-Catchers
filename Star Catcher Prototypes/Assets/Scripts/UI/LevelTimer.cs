@@ -11,6 +11,7 @@ public class LevelTimer : MonoBehaviour {
 	public static Action FadeOut;
 
 	public const float LEVEL_DURATION = 60;
+	public Text timer;
 
 	public Light dirLight;
 
@@ -21,7 +22,10 @@ public class LevelTimer : MonoBehaviour {
 	private Color tempLightCol;
 	private SpriteRenderer sprite;
 
-	private float incrementLight;
+	const float MAX_LIGHT_INTENSITY = 2;
+	private float incrementLightCol;
+	private float incrementLightIntensity;
+	private float baseLightIntensity;
 
 	// Use this for initialization
 	void Start () {
@@ -29,8 +33,10 @@ public class LevelTimer : MonoBehaviour {
 		tempLightCol = dirLight.color;
 
 		colIncrement = 1f/LEVEL_DURATION;
-		incrementLight = ((1f - dirLight.color.r) / LEVEL_DURATION);
+		incrementLightCol = ((1f - dirLight.color.r) / LEVEL_DURATION);
+		incrementLightIntensity = (MAX_LIGHT_INTENSITY - dirLight.intensity) / LEVEL_DURATION;
 		sprite = GetComponent<SpriteRenderer> ();
+		timer.text = LEVEL_DURATION.ToString ();
 
 		StartCoroutine (Tick());
 	}
@@ -51,6 +57,7 @@ public class LevelTimer : MonoBehaviour {
 
 			yield return new WaitForSeconds (1);
 			elapsedTime++;
+			timer.text = (LEVEL_DURATION - elapsedTime).ToString ();
 		}
 	}
 
@@ -63,9 +70,11 @@ public class LevelTimer : MonoBehaviour {
 
 	void FadeLight()
 	{
-		tempLightCol.r += incrementLight;
-		tempLightCol.g += incrementLight;
-		tempLightCol.b += incrementLight;
+		dirLight.intensity += incrementLightIntensity;
+
+		tempLightCol.r += incrementLightCol;
+		tempLightCol.g += incrementLightCol;
+		tempLightCol.b += incrementLightCol;
 		dirLight.color = tempLightCol;
 	}
 }
