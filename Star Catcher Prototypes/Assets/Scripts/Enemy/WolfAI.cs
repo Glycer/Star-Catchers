@@ -7,14 +7,14 @@ public class WolfAI : MonoBehaviour {
 
 	private bool canRun;
 	private Rigidbody rigidBody;
-	private Vector3 jumpForce = new Vector3(0, 300, 0);
+	private Vector3 jumpForce = new Vector3(0, 600, 0);
 
 	// Use this for initialization
 	void Start () {
 		rigidBody = GetComponent<Rigidbody> ();
 		canRun = true;
 		
-		StartCoroutine(Run());
+		//StartCoroutine(Run());
 	}
 
 	public void Jump()
@@ -26,15 +26,16 @@ public class WolfAI : MonoBehaviour {
 	{
 		canRun = false;
 	}
-	
+
+	/*
 	IEnumerator Run()
 	{
 		while (canRun)
 		{
 			transform.Translate (runSpeed * Time.deltaTime, 0, 0);
-			yield return;
+			yield return new ;
 		}
-	}
+	}*/
 }
 
 //Make this a separate script
