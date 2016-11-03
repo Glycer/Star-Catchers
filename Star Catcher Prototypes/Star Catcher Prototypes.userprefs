@@ -1,15 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy/WolfAI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/LevelTimer.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets\Scripts\Environment\Stars\TrackStars.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\LevelTimer.cs" Line="37" Column="89" />
-      <File FileName="Assets\Scripts\UI\StarSpin.cs" Line="1" Column="1" />
-=======
-      <File FileName="Assets/Scripts/Player/PlayerMotion.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Enemy/WolfAI.cs" Line="10" Column="46" />
->>>>>>> master
+      <File FileName="Assets/Scripts/Enemy/WolfAI.cs" Line="8" Column="2" />
+      <File FileName="Assets/Scripts/Environment/Stars/StarBehaviour.cs" Line="21" Column="12" />
+      <File FileName="Assets/Scripts/Environment/Stars/StarCoreBehaviour.cs" Line="12" Column="3" />
+      <File FileName="Assets/Scripts/Player/JumpScript.cs" Line="7" Column="47" />
+      <File FileName="Assets/Scripts/Environment/Cycling/SectionData.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Environment/Cycling/Cycler.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/LevelTimer.cs" Line="83" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
