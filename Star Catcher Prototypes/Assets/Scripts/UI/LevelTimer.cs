@@ -81,6 +81,11 @@ public class LevelTimer : MonoBehaviour {
 
 	string FormatSeconds(int seconds)
 	{
-		return ((seconds / SECONDS_IN_MINUTE) + ":" + seconds % SECONDS_IN_MINUTE);
+		if (seconds % SECONDS_IN_MINUTE < 10) {
+			return ((seconds / SECONDS_IN_MINUTE) + ":0" + seconds % SECONDS_IN_MINUTE);
+		}
+		else {
+			return ((seconds / SECONDS_IN_MINUTE) + ":" + seconds % SECONDS_IN_MINUTE);
+		}
 	}
 }

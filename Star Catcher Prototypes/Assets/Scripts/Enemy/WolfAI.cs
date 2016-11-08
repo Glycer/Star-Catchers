@@ -7,54 +7,45 @@ public class WolfAI : MonoBehaviour {
 
 	private bool canRun;
 	private Rigidbody rigidBody;
-	private Vector3 jumpForce = new Vector3(0, 600, 0);
+	private Animator anim;
+
+	private Vector3 jumpForce = new Vector3(0, 1000, 0);
+	private Vector3 nullForce = new Vector3(0, 0, 0);
 
 	// Use this for initialization
-	void Start () {
+	void Start () {		
 		rigidBody = GetComponent<Rigidbody> ();
+		anim = GetComponentInChildren<Animator> ();
+
 		canRun = true;
-		
-		//StartCoroutine(Run());
+		Run ();
 	}
 
 	public void Jump()
 	{
+		anim.Play ("WolfJump");
+		rigidBody.velocity = nullForce;
 		rigidBody.AddForce (jumpForce);
 	}
-	
+
+	/*
 	public void Stop()
 	{
 		canRun = false;
 	}
+	*/
 
-	/*
-	IEnumerator Run()
+	public void Run()
+	{
+		StartCoroutine (IRun());
+	}
+
+	IEnumerator IRun()
 	{
 		while (canRun)
 		{
 			transform.Translate (runSpeed * Time.deltaTime, 0, 0);
-			yield return new ;
+			yield return new WaitForEndOfFrame ();
 		}
-	}*/
-}
-
-//Make this a separate script
-public class WolfAttack : MonoBehaviour {
-	
-	private Animator anim;
-	
-	void Start()
-	{
-		anim = GetComponent<Animator>();
-	}
-	
-	void OnTriggerEnter()
-	{
-		anim.Play("Attack");
-	}
-	
-	void Attack(GameObject target)
-	{
-		target.GetComponent<Animator>().Play("TakeHit");
 	}
 }
