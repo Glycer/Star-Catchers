@@ -5,7 +5,7 @@ using System.Collections;
 public class WhiteInOut : MonoBehaviour {
 
 	public const float FADE_DURATION_OUT = 3;
-	public const float FADE_DURATION_IN = .5f;
+	public const float FADE_DURATION_IN = .25f;
 	public const float INCREMENT = 1f/30f;
 
 	public bool isFadingIn;

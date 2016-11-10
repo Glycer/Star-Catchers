@@ -11,6 +11,7 @@ public class TrackStars : MonoBehaviour {
 	void Start () {
 		Collection.CollectStar += IncrementStars;
 		Collection.LoseStars += LoseStars;
+		LevelTimer.EndLevel += SetScore;
 		LevelTimer.EndLevel += Unsubscribe;
 
 		starsNumTxt = GetComponent<Text> ();
@@ -45,5 +46,11 @@ public class TrackStars : MonoBehaviour {
 	{
 		Collection.CollectStar -= IncrementStars;
 		Collection.LoseStars -= LoseStars;
+		LevelTimer.EndLevel -= SetScore;
+	}
+
+	void SetScore()
+	{
+		StaticScore.finalScore = starsNum;
 	}
 }

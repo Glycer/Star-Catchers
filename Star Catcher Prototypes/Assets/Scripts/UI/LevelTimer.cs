@@ -50,7 +50,7 @@ public class LevelTimer : MonoBehaviour {
 			}
 			else if (elapsedTime == LEVEL_DURATION) {
 				EndLevel ();
-				SceneManager.LoadScene ("Start Screen");
+				SceneManager.LoadScene ("Level Summary");
 			}
 
 			FadeBackground ();

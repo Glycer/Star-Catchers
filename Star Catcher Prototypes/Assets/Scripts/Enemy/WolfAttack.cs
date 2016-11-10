@@ -3,16 +3,18 @@ using System.Collections;
 
 public class WolfAttack : MonoBehaviour {
 
-	private Animator anim;
+	//private Animator anim;
 
 	void Start()
 	{
-		anim = GetComponent<Animator>();
+		//anim = GetComponent<Animator>();
 	}
 
-	void OnTriggerEnter()
+	void OnTriggerEnter(/*Collider col*/)
 	{
-		anim.Play("Attack");
+		Collection.LoseStars ();
+		//anim.Play("Attack");
+		//Attack(col.gameObject);
 	}
 
 	void Attack(GameObject target)
