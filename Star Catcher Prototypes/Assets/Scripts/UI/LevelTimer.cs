@@ -23,7 +23,7 @@ public class LevelTimer : MonoBehaviour {
 	private Color tempLightCol;
 	private Text timer;
 
-	const float MAX_LIGHT_INTENSITY = 2;
+	const float MAX_LIGHT_INTENSITY = 1;
 	private float incrementLightCol;
 	private float incrementLightIntensity;
 	private float baseLightIntensity;
@@ -33,7 +33,7 @@ public class LevelTimer : MonoBehaviour {
 		colTemp = new Color (1, 1, 1, 0);
 		tempLightCol = dirLight.color;
 
-		colIncrement = 1f/LEVEL_DURATION;
+		colIncrement = .8f/LEVEL_DURATION;
 		incrementLightCol = ((1f - dirLight.color.r) / LEVEL_DURATION);
 		incrementLightIntensity = (MAX_LIGHT_INTENSITY - dirLight.intensity) / LEVEL_DURATION;
 		timer = GetComponent<Text> ();

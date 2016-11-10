@@ -3,8 +3,8 @@ using System.Collections;
 
 public class SpawnStars : MonoBehaviour {
 
-	const float MIN_SPAWN_DELAY = 0.5f;
-	const float MAX_SPAWN_DELAY = 2.5f;
+	const float MIN_SPAWN_DELAY = 0.3f;
+	const float MAX_SPAWN_DELAY = 1.5f;
 
 	public GameObject[] stars;
 
