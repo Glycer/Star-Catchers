@@ -5,7 +5,8 @@ public class JumpPoint : MonoBehaviour {
 
 	void OnTriggerEnter(Collider _col)
 	{
-		_col.transform.GetComponent<WolfAI> ().Jump ();
+		if (_col.transform.GetComponent<WolfAI> () != null)
+			_col.transform.GetComponent<WolfAI> ().Jump ();
 	}
 
 }

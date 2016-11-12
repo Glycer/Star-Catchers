@@ -1,9 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class SetRating : MonoBehaviour {
-	
+
+	private Dictionary<int, string> ratings = new Dictionary<int, string> {
+		{ 10, "CRAP" },
+		{ 20, "MEDIOCRE" },
+		{ 30, "DECENT" },
+		{ 50, "EXCELLENT" },
+	};
 	private Text txt;
 
 	// Use this for initialization
@@ -15,6 +22,11 @@ public class SetRating : MonoBehaviour {
 
 	string Set(int _score)
 	{
-		return "NONE";
+		foreach (var pair in ratings) {
+			if (_score <= pair.Key) {
+				return pair.Value;
+			}
+		}
+		return "INCREDIBLE!";
 	}
 }
