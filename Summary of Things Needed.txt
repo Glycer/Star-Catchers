@@ -1,14 +1,28 @@
 Primary Menu to start game
+	Save
+	Load
+	New
 
 Map view to select different locations
+	Action when location is selected
+
+Battle Preparation Screen
+	List of characters available
+	Passes characters chosen to the battle proper
 
 Battle screen taking input to solve math problems
+	Action upon victory
+	Action upon defeat
 
 Victory Screen showing experience and loot gained
+	Adds experience and loot to appropriate areas
 
 Inventory
+	Contains List of items carried
 
 General menu in game
 	Back to Main Menu
 	Stats
 	Inventory
+	
+Overview pointing to project requirements
