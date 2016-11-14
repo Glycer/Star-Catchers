@@ -1,0 +1,14 @@
+Primary Menu to start game
+
+Map view to select different locations
+
+Battle screen taking input to solve math problems
+
+Victory Screen showing experience and loot gained
+
+Inventory
+
+General menu in game
+	Back to Main Menu
+	Stats
+	Inventory
