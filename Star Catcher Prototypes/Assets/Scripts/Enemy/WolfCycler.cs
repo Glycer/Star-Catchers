@@ -18,7 +18,7 @@ public class WolfCycler : MonoBehaviour {
 
 	IEnumerator SpawnCycle()
 	{
-		for (int i = 0; i < LevelTimer.LEVEL_DURATION; i += SPAWN_DELAY)
+		for (int i = 0; i < StaticVariables.levelDuration; i += SPAWN_DELAY)
 		{
 			int _rand = Random.Range (0, SPAWN_CHANCE);
 

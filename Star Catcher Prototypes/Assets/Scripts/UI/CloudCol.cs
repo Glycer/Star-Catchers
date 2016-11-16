@@ -13,9 +13,9 @@ public class CloudCol : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		red = cloudColTarget.r / LevelTimer.LEVEL_DURATION;
-		green =  cloudColTarget.g / LevelTimer.LEVEL_DURATION;
-		blue =  cloudColTarget.b / LevelTimer.LEVEL_DURATION;
+		red = cloudColTarget.r / StaticVariables.levelDuration;
+		green =  cloudColTarget.g / StaticVariables.levelDuration;
+		blue =  cloudColTarget.b / StaticVariables.levelDuration;
 		cloudColIncrement = new Color (red, green, blue);
 	}
 }

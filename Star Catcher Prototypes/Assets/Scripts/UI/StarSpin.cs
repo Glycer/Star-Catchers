@@ -21,7 +21,7 @@ public class StarSpin : MonoBehaviour {
 
 	IEnumerator Spin()
 	{
-		for (float i = 0; i < LevelTimer.LEVEL_DURATION; i += SPIN_DELAY) {
+		for (float i = 0; i < StaticVariables.levelDuration; i += SPIN_DELAY) {
 			rectTransform.Rotate (spinSpeed);
 			spinSpeed.z = SPIN_Z * tracker.starsNum;
 

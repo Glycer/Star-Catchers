@@ -15,7 +15,7 @@ public class UpdateCloudCol : MonoBehaviour {
 
 	IEnumerator Lighten()
 	{
-		while (elapsedTime <= LevelTimer.LEVEL_DURATION) {
+		while (elapsedTime <= StaticVariables.levelDuration) {
 
 			tempCol = GetComponent<FadeToDawn>().tempCol;
 			GetComponentInParent<CloudCol>().cloudCol = tempCol;

@@ -76,13 +76,14 @@
      <Compile Include="Assets\Scripts\UI\FadeToDawn.cs" />
      <Compile Include="Assets\Scripts\UI\LevelTimer.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\UI\SelectLevelDuration.cs" />
      <Compile Include="Assets\Scripts\UI\SetRating.cs" />
      <Compile Include="Assets\Scripts\UI\SetScore.cs" />
      <Compile Include="Assets\Scripts\UI\StarSpin.cs" />
      <Compile Include="Assets\Scripts\UI\StaticScore.cs" />
+     <Compile Include="Assets\Scripts\UI\StaticVariables.cs" />
      <Compile Include="Assets\Scripts\UI\WhiteInOut.cs" />
      <Compile Include="Assets\Scripts\Unused\SectionLength.cs" />
-     <Compile Include="Assets\Scripts\Unused\StaticVariables.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

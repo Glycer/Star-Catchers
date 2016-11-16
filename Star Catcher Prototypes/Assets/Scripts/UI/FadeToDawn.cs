@@ -19,7 +19,7 @@ public class FadeToDawn : MonoBehaviour {
 	
 	IEnumerator Fade()
 	{
-		while (elapsedTime <= LevelTimer.LEVEL_DURATION) {
+		while (elapsedTime <= StaticVariables.levelDuration) {
 
 			tempCol += GetComponentInParent<CloudCol>().cloudColIncrement;
 			sprite.color = tempCol;

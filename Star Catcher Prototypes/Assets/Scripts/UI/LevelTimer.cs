@@ -10,7 +10,6 @@ public class LevelTimer : MonoBehaviour {
 	public static Action EndLevel;
 	public static Action FadeOut;
 
-	public const float LEVEL_DURATION = 60;
 	public SpriteRenderer sprite;
 
 	public Light dirLight;
@@ -33,22 +32,22 @@ public class LevelTimer : MonoBehaviour {
 		colTemp = new Color (1, 1, 1, 0);
 		tempLightCol = dirLight.color;
 
-		colIncrement = .8f/LEVEL_DURATION;
-		incrementLightCol = ((1f - dirLight.color.r) / LEVEL_DURATION);
-		incrementLightIntensity = (MAX_LIGHT_INTENSITY - dirLight.intensity) / LEVEL_DURATION;
+		colIncrement = .8f/StaticVariables.levelDuration;
+		incrementLightCol = ((1f - dirLight.color.r) / StaticVariables.levelDuration);
+		incrementLightIntensity = (MAX_LIGHT_INTENSITY - dirLight.intensity) / StaticVariables.levelDuration;
 		timer = GetComponent<Text> ();
-		timer.text = FormatSeconds((int)(LEVEL_DURATION));
+		timer.text = FormatSeconds((int)(StaticVariables.levelDuration));
 
 		StartCoroutine (Tick());
 	}
 
 	IEnumerator Tick()
 	{
-		while (elapsedTime <= LEVEL_DURATION) {
-			if (elapsedTime == LEVEL_DURATION - WhiteInOut.FADE_DURATION_OUT) {
+		while (elapsedTime <= StaticVariables.levelDuration) {
+			if (elapsedTime == StaticVariables.levelDuration - WhiteInOut.FADE_DURATION_OUT) {
 				FadeOut ();
 			}
-			else if (elapsedTime == LEVEL_DURATION) {
+			else if (elapsedTime == StaticVariables.levelDuration) {
 				EndLevel ();
 				SceneManager.LoadScene ("Level Summary");
 			}
@@ -58,7 +57,7 @@ public class LevelTimer : MonoBehaviour {
 
 			yield return new WaitForSeconds (1);
 			elapsedTime++;
-			timer.text = FormatSeconds((int)(LEVEL_DURATION - elapsedTime));
+			timer.text = FormatSeconds((int)(StaticVariables.levelDuration - elapsedTime));
 		}
 	}
 
