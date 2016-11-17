@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Collections;
 using System;
 
@@ -10,12 +9,14 @@ public class MainMenu : MonoBehaviour {
 
 	void Start()
 	{
-		FadeIn ();
+		ChangeScene += JunkFunction;
+
+		if (FadeIn != null)
+			FadeIn ();
 	}
 
-	public void ToGame()
+	//For some reason, the delegates in this class both remain null if no function is assigned to them here
+	void JunkFunction()
 	{
-		ChangeScene ();
-		SceneManager.LoadScene ("Prototype One");
 	}
 }
