@@ -25,6 +25,7 @@ public class WhiteInOut : MonoBehaviour {
 		incrementDelayIn = INCREMENT * FADE_DURATION_IN;
 
 		tempCol = isFadingIn ? new Color (1, 1, 1, 1) : new Color (1, 1, 1, 0);
+		GetComponent<Image> ().color = tempCol;
 	}
 
 	void FadeOut()
