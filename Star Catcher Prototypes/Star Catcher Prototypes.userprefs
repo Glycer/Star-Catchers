@@ -1,10 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/MainMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Environment\Stars\StarBehaviour.cs">
     <Files>
-      <File FileName="Assets/Scripts/UI/MainMenu.cs" Line="23" Column="1" />
-      <File FileName="Assets/Scripts/UI/WhiteInOut.cs" Line="28" Column="42" />
-      <File FileName="Assets/Scripts/UI/SceneNavigation.cs" Line="11" Column="27" />
+      <File FileName="Assets\Scripts\UI\MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\WhiteInOut.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\SceneNavigation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Environment\Cycling\LightningBump.cs" Line="25" Column="46" />
+      <File FileName="Assets\Scripts\Enemy\WolfAttack.cs" Line="19" Column="25" />
+      <File FileName="Assets\Scripts\Environment\Stars\StarBehaviour.cs" Line="27" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

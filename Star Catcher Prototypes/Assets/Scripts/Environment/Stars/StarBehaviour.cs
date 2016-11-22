@@ -10,7 +10,8 @@ public class StarBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GetComponent<Rigidbody> ().AddTorque (torqueForce);
-		Destroy (gameObject, LIFESPAN);
+		//Destroy (gameObject, LIFESPAN);
+		StartCoroutine(Flash());
 	}
 
 	void OnTriggerEnter()
@@ -19,5 +20,15 @@ public class StarBehaviour : MonoBehaviour {
 			Collection.CollectStar ();
 
 		Destroy (gameObject);
+	}
+
+	IEnumerator Flash()
+	{
+		for (int i = 0; i <= LIFESPAN; i++) {
+			if (i == LIFESPAN) {
+				GetComponent<Animator> ().Play ("StarDeath");
+			}
+			yield return new WaitForSeconds (1);
+		}
 	}
 }
