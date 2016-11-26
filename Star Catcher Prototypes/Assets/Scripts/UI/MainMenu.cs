@@ -4,19 +4,23 @@ using System;
 
 public class MainMenu : MonoBehaviour {
 
+	public static Action InitFade;
 	public static Action FadeIn;
 	public static Action ChangeScene;
 
 	void Start()
 	{
-		ChangeScene += JunkFunction;
+		InitFade += InitToFalse;
 
-		if (FadeIn != null)
+		if (StaticVariables.isGameInitializing)
+			InitFade();
+		else
 			FadeIn ();
 	}
 
 	//For some reason, the delegates in this class both remain null if no function is assigned to them here
-	void JunkFunction()
+	void InitToFalse()
 	{
+		StaticVariables.isGameInitializing = false;
 	}
 }

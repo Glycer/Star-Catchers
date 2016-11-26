@@ -18,13 +18,15 @@ public class WhiteInOut : MonoBehaviour {
 	void Start () {
 		LevelTimer.FadeOut += FadeOut;
 		LevelTimer.EndLevel += Unsubscribe;
+		MainMenu.InitFade += DelayedFadeIn;
 		MainMenu.FadeIn += FadeIn;
 		MainMenu.ChangeScene += Unsubscribe;
 
 		incrementDelayOut = INCREMENT * FADE_DURATION_OUT;
 		incrementDelayIn = INCREMENT * FADE_DURATION_IN;
 
-		tempCol = isFadingIn ? new Color (1, 1, 1, 1) : new Color (1, 1, 1, 0);
+		tempCol = GetComponent<Image> ().color;
+		tempCol.a = isFadingIn ? 1 : 0;
 		GetComponent<Image> ().color = tempCol;
 	}
 
@@ -33,9 +35,14 @@ public class WhiteInOut : MonoBehaviour {
 		StartCoroutine (WhiteOut ());
 	}
 
-	void FadeIn()
+	public void FadeIn()
 	{
 		StartCoroutine (WhiteIn ());
+	}
+
+	public void DelayedFadeIn()
+	{
+		StartCoroutine (DelayedWhiteIn ());
 	}
 
 	IEnumerator WhiteOut()
@@ -57,12 +64,19 @@ public class WhiteInOut : MonoBehaviour {
 			yield return new WaitForSeconds (incrementDelayIn);
 		}
 
-		Destroy (gameObject);
+		gameObject.SetActive(false);
+	}
+
+	IEnumerator DelayedWhiteIn()
+	{
+		yield return new WaitForSeconds (LogoFade.HOLD);
+		StartCoroutine (WhiteIn());
 	}
 
 	void Unsubscribe()
 	{
 		LevelTimer.FadeOut -= FadeOut;
+		MainMenu.InitFade -= DelayedFadeIn;
 		MainMenu.FadeIn -= FadeIn;
 	}
 }

@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\UI\CloudCol.cs" />
      <Compile Include="Assets\Scripts\UI\FadeToDawn.cs" />
      <Compile Include="Assets\Scripts\UI\LevelTimer.cs" />
+     <Compile Include="Assets\Scripts\UI\LogoFade.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
      <Compile Include="Assets\Scripts\UI\SceneNavigation.cs" />
      <Compile Include="Assets\Scripts\UI\SelectLevelDuration.cs" />
