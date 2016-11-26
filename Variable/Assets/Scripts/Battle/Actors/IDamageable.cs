@@ -3,7 +3,7 @@ using System.Collections;
 
 public interface IDamageable {
 
-	int health { get; }
+	int health { get; set; }
 
-	void TakeDamage();
+	void TakeDamage(int dmg);
 }

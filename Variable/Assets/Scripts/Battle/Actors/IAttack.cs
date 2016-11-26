@@ -3,7 +3,7 @@ using System.Collections;
 
 public interface IAttack {
 
-	GameObject target { get; set; }
+	BattleSprite target { get; set; }
 
-	void DealDamage();
+	void DealDamage(BattleSprite tar);
 }
