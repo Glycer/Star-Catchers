@@ -9,6 +9,7 @@ public class AnswerField : MonoBehaviour {
 	public static Action Wrong;
 
 	public ProblemField problem;
+	public GoodGuy pc;
 
 	private Text txt;
 	private int answer;
@@ -16,6 +17,7 @@ public class AnswerField : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Correct += ClearField;
+		Correct += PCAtk;
 
 		txt = GetComponent<Text> ();
 	}
@@ -33,5 +35,10 @@ public class AnswerField : MonoBehaviour {
 	void ClearField()
 	{
 		txt.text = "CORRECT";
+	}
+
+	void PCAtk()
+	{
+		pc.Attack (pc.target);
 	}
 }
