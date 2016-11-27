@@ -6,7 +6,7 @@ using System;
 
 public class BattleSprite : MonoBehaviour, IAttack, IDamageable {
 
-	const float DAMAGE_DELAY = .1f;
+	public const float DAMAGE_DELAY = .1f;
 
 	public Action<BattleSprite> Attack;
 

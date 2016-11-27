@@ -15,13 +15,16 @@ public class AnswerField : MonoBehaviour {
 	private int answer;
 
 	// Use this for initialization
-	void Start () {
+	private void Start () {
 		Correct += ClearField;
 		Correct += PCAtk;
 
 		txt = GetComponent<Text> ();
 	}
 
+	/// <summary>
+	/// Checks the answer.
+	/// </summary>
 	public void CheckAnswer()
 	{
 		if (!int.TryParse (txt.text, out answer))
@@ -32,12 +35,18 @@ public class AnswerField : MonoBehaviour {
 			Wrong ();
 	}
 
-	void ClearField()
+	/// <summary>
+	/// Clears the field.
+	/// </summary>
+	private void ClearField()
 	{
 		txt.text = "CORRECT";
 	}
 
-	void PCAtk()
+	/// <summary>
+	/// Triggers the PC to attack their target.
+	/// </summary>
+	private void PCAtk()
 	{
 		pc.Attack (pc.target);
 	}
