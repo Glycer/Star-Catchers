@@ -1,10 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UI\MainMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/WhiteInOut.cs">
     <Files>
-      <File FileName="Assets\Scripts\UI\MainMenu.cs" Line="24" Column="3" />
-      <File FileName="Assets\Scripts\UI\SceneNavigation.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\StaticVariables.cs" Line="5" Column="43" />
+      <File FileName="Assets/Scripts/UI/LogoFade.cs" Line="23" Column="40" />
+      <File FileName="Assets/Scripts/UI/WhiteInOut.cs" Line="15" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -12,7 +12,7 @@ public class WhiteInOut : MonoBehaviour {
 
 	private float incrementDelayIn;
 	private float incrementDelayOut;
-	private Color tempCol;
+	private Color tempCol = new Color(1, 1, 1, 1);
 
 	// Use this for initialization
 	void Start () {
