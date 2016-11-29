@@ -13,7 +13,7 @@ public class WolfAttack : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
 	{
-		Collection.LoseStars ();
+		Collection.LoseStars (TrackStars.LostStars());
 		sprayEffect = Instantiate (Resources.Load("2D/Effects/SprayEffect")) as GameObject;
 		sprayEffect.transform.position = col.transform.position;
 		//anim.Play("Attack");

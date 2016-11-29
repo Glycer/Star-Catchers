@@ -30,6 +30,6 @@ public class LightningBump : MonoBehaviour {
 		_colBody.AddForce (bumpForce);
 
 		//Take stars
-		Collection.LoseStars();
+		Collection.LoseStars(TrackStars.LostStars());
 	}
 }

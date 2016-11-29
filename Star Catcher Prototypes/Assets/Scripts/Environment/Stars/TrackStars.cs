@@ -15,8 +15,8 @@ public class TrackStars : MonoBehaviour {
 		LevelTimer.EndLevel += Unsubscribe;
 
 		starsNumTxt = GetComponent<Text> ();
-		starsNumTxt.text = starsNum.ToString();
 		starsNum = 0;
+		UpdateStars ();
 	}
 
 	void IncrementStars()
@@ -25,12 +25,20 @@ public class TrackStars : MonoBehaviour {
 		UpdateStars ();
 	}
 
-	void LoseStars()
+	void LoseStars(int _numStars)
 	{
-		int rand = Random.Range (1, starsNum / 2);
+		/*int rand = Random.Range (1, starsNum / 2);
 
 		if (starsNum > 0) {
 			starsNum -= rand;
+			UpdateStars ();
+		}
+		*/
+
+		if (starsNum > 0) {
+			starsNum -= _numStars;
+			starsNum = (starsNum >= 0) ? starsNum : 0;
+
 			UpdateStars ();
 		}
 	}
@@ -52,5 +60,11 @@ public class TrackStars : MonoBehaviour {
 	void SetScore()
 	{
 		StaticScore.finalScore = starsNum;
+	}
+
+	public static int LostStars()
+	{
+		int _stars = Random.Range (3, 6);
+		return _stars;
 	}
 }

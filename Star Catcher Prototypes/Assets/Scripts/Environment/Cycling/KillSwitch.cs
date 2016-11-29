@@ -7,6 +7,6 @@ public class KillSwitch : MonoBehaviour {
 	void OnTriggerEnter()
 	{
 		CameraMotion.ResetAll();
-		Collection.LoseStars ();
+		Collection.LoseStars (TrackStars.LostStars());
 	}
 }
