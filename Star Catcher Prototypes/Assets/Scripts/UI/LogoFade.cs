@@ -8,6 +8,11 @@ public class LogoFade : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		MainMenu.InitFade += StartFade;
+
+		if (!StaticVariables.isGameInitializing) {
+			gameObject.SetActive (false);
+			Unsubscribe ();
+		}
 	}
 
 	void StartFade()

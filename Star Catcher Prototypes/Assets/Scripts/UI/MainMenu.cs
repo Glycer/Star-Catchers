@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour {
 
 		if (StaticVariables.isGameInitializing)
 			InitFade();
-		else
+		else if (FadeIn != null)
 			FadeIn ();
 	}
 
