@@ -11,4 +11,9 @@ public class SceneNavigation : MonoBehaviour {
 		MainMenu.ChangeScene ();
 		SceneManager.LoadScene (sceneName);
 	}
+
+	public void Quit()
+	{
+		Application.Quit ();
+	}
 }
