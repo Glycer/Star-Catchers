@@ -47,3 +47,18 @@ public static class CharacterStats {
 		damageStrength += 5;
 	}
 }
+
+//Try this, with CharacterStats non-static, inheriting from ICharacterStats
+public interface ICharacterStats {
+	int exp { get; set; };
+	int damageStrength { get; set; };
+	int health { get; set; };
+	int defense { get; set; };
+	int level { get; set; };
+}
+
+public static class CharactersStats {
+	//May need an array here instead, since Lists don't seem to play well
+	//with static
+	List<CharacterStats> characters = new List<CharacterStats> { /*character names*/ }
+}
