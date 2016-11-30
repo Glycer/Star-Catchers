@@ -6,7 +6,7 @@ using System;
 
 public class BattleSprite : MonoBehaviour, IAttack, IDamageable {
 
-	public const float DAMAGE_DELAY = .1f;
+	public const float DAMAGE_DELAY = .05f;
 
 	public Action<BattleSprite> Attack;
 
@@ -22,7 +22,7 @@ public class BattleSprite : MonoBehaviour, IAttack, IDamageable {
 
 		txtHealth = GetComponentInChildren<Text> ();
 		health = int.Parse (txtHealth.text);
-		BattleManager.SetTargets (this);
+		TargetingSystem.SetTargets (this);
 	}
 
 	public void DealDamage(BattleSprite tar)
@@ -35,10 +35,24 @@ public class BattleSprite : MonoBehaviour, IAttack, IDamageable {
 		StartCoroutine (RunDamage(dmg));
 	}
 
+	public void KillCheck()
+	{
+		if (health <= 0) {
+			TargetingSystem.Kill (this);
+		}
+	}
+
+	/// <summary>
+	/// Makes the health drop over the course of a second or two, rather than instantaneously.
+	/// </summary>
+	/// <returns>The damage.</returns>
+	/// <param name="_dmg">Dmg.</param>
 	protected IEnumerator RunDamage(int _dmg)
 	{
 		for (int i = 0; i < _dmg; i++) {
 			health--;
+			KillCheck ();
+
 			txtHealth.text = health.ToString ();
 			yield return new WaitForSeconds (DAMAGE_DELAY);
 		}

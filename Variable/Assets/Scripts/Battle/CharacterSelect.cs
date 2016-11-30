@@ -1,15 +1,40 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CharacterSelect : MonoBehaviour {
 
+	public Image charImage;
+	public List<Sprite> lstChars;
+
+	private Dropdown dropDown;
+
 	// Use this for initialization
 	void Start () {
-	
+		dropDown = GetComponent<Dropdown> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public void SelectCharacter()
+	{
+		string _charName = dropDown.itemText.text;
+
+		//This could be done better with a dictionary.
+		switch (_charName) {
+		case "Ivan":
+			charImage.sprite = lstChars [0];
+			break;
+		case "Janice":
+			charImage.sprite = lstChars [1];
+			break;
+		case "Rowan":
+			charImage.sprite = lstChars [2];
+			break;
+		case "Moira":
+			charImage.sprite = lstChars [3];
+			break;
+		default:
+			break;
+		}
 	}
 }
