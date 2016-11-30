@@ -27,3 +27,23 @@ General menu in game
 	
 Overview pointing to project requirements
 	Named "To Anthony"
+
+
+Static class for experience (well, maybe static class.
+At least, it'll have static variables and functions):
+
+//Or maybe turn this into an interface for one or two
+//other scripts so that it can be applied more dynamically.
+public static class CharacterStats {
+	public static int exp = 0;
+	public static int damageStrength = 5;
+	
+	public static void AddXP(int _xp) {
+		exp += _xp;
+	}
+	
+	public static void StrengthUp()
+	{
+		damageStrength += 5;
+	}
+}
