@@ -10,20 +10,30 @@ public class Sprint : MonoBehaviour {
 	 * and two floats to control how quickly sprint energy passively fills or drains when active.
 	*/
 	public Text meter;
+	public Image star;
+	public bool canSprint = false;
+
 	private int sprintNum = 0;
-	private int sprintMax = 25;
+	private int sprintMax = 50;
 	private float fillDelay = .1f;
 	private float drainDelay = .05f;
 
+	private float originSpeed;
 	private float boostSpeed;
+	private Color tempCol;
 
 	// Use this for initialization
 	void Start () {
-		boostSpeed = GetComponent<PlayerMotion> ().speed;
+		originSpeed = GetComponent<PlayerMotion> ().speed;
+		boostSpeed = GetComponent<PlayerMotion> ().speed * 2.5f;
 
 		PlayerMotion.StartSprint += Boost;
 		PlayerMotion.ResetSprint += Stop;
 		LevelTimer.EndLevel += Unsubscribe;
+
+		tempCol = new Color (1, 1, 1, 0);
+		star.color = tempCol;
+		meter.text = "";
 	}
 
 	void Boost()
@@ -44,7 +54,8 @@ public class Sprint : MonoBehaviour {
 	{
 		while (sprintNum < sprintMax) {
 			sprintNum++;
-			meter.text = sprintNum.ToString ();
+			UpdateStarTransparency ();
+			IsMaxed ();
 			yield return new WaitForSeconds (fillDelay);
 		}
 	}
@@ -52,11 +63,12 @@ public class Sprint : MonoBehaviour {
 	//Drain the sprint meter
 	IEnumerator ChannelSprint()
 	{
-		GetComponent<PlayerMotion> ().speed += boostSpeed;
+		GetComponent<PlayerMotion> ().speed = boostSpeed;
+		meter.text = "";
 
 		while (sprintNum > 0) {
-			sprintNum -= 1;
-			meter.text = sprintNum.ToString ();
+			sprintNum -= 2;
+			UpdateStarTransparency ();
 			yield return new WaitForSeconds (drainDelay);
 		}
 		ResetSpeed ();
@@ -65,7 +77,21 @@ public class Sprint : MonoBehaviour {
 	//Reset speed whenever sprinting ceases
 	void ResetSpeed()
 	{
-		GetComponent<PlayerMotion> ().speed = boostSpeed;
+		GetComponent<PlayerMotion> ().speed = originSpeed;
+	}
+
+	void IsMaxed()
+	{
+		if (sprintNum == sprintMax) {
+			canSprint = true;
+			meter.text = "Sprint!";
+		}
+	}
+
+	void UpdateStarTransparency()
+	{
+		tempCol.a = (float)sprintNum / (float)sprintMax;
+		star.color = tempCol;
 	}
 
 	void Unsubscribe()
