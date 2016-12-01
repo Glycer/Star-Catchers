@@ -16,6 +16,7 @@ public class BattleSprite : MonoBehaviour, IAttack, IDamageable {
 	public Text txtHealth;
 	public int damageStrength;
 
+	//Use this for initialization
 	public virtual void Start()
 	{
 		Attack += DealDamage;
@@ -25,16 +26,27 @@ public class BattleSprite : MonoBehaviour, IAttack, IDamageable {
 		TargetingSystem.SetTargets (this);
 	}
 
+	/// <summary>
+	/// Deals damage.
+	/// </summary>
+	/// <param name="tar">Tar.</param>
 	public void DealDamage(BattleSprite tar)
 	{
 		tar.TakeDamage (damageStrength);
 	}
 
+	/// <summary>
+	/// Takes damage.
+	/// </summary>
+	/// <param name="dmg">Dmg.</param>
 	public void TakeDamage(int dmg)
 	{
 		StartCoroutine (RunDamage(dmg));
 	}
 
+	/// <summary>
+	/// Checks to see if this BattleSprite has been killed
+	/// </summary>
 	public void KillCheck()
 	{
 		if (health <= 0) {

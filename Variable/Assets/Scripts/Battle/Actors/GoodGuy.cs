@@ -11,6 +11,11 @@ public class GoodGuy : BattleSprite {
 		base.Start();
 
 		StartCoroutine (Squeak());
+
+		if (isPC) {
+			StaticStuff.GainLevel ();
+			damageStrength = StaticStuff.damageStrength;
+		}
 	}
 
 	/// <summary>
