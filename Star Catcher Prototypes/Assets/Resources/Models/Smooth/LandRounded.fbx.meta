@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< refs/remotes/origin/master
 guid: e61b0757ab8674d3995fe082a67f8085
 timeCreated: 1480616726
+=======
+guid: 5e7525263f6ae9444a87712e2a8f3640
+timeCreated: 1480564432
+>>>>>>> Star Catchers
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -19,8 +24,12 @@ ModelImporter:
     100022: //RootNode
     100024: PlateauLeft
     100026: PlateauMiddle
+<<<<<<< refs/remotes/origin/master
     100028: SlopeDown
     100030: SlopeUp
+=======
+    100028: SlopeUp
+>>>>>>> Star Catchers
     400000: C1
     400002: C2
     400004: Chasm
@@ -35,8 +44,12 @@ ModelImporter:
     400022: //RootNode
     400024: PlateauLeft
     400026: PlateauMiddle
+<<<<<<< refs/remotes/origin/master
     400028: SlopeDown
     400030: SlopeUp
+=======
+    400028: SlopeUp
+>>>>>>> Star Catchers
     2300000: C1
     2300002: C2
     2300004: F1
@@ -47,8 +60,12 @@ ModelImporter:
     2300014: I3
     2300016: PlateauLeft
     2300018: PlateauMiddle
+<<<<<<< refs/remotes/origin/master
     2300020: SlopeDown
     2300022: SlopeUp
+=======
+    2300020: SlopeUp
+>>>>>>> Star Catchers
     3300000: C1
     3300002: C2
     3300004: F1
@@ -59,8 +76,12 @@ ModelImporter:
     3300014: I3
     3300016: PlateauLeft
     3300018: PlateauMiddle
+<<<<<<< refs/remotes/origin/master
     3300020: SlopeDown
     3300022: SlopeUp
+=======
+    3300020: SlopeUp
+>>>>>>> Star Catchers
     4300000: Flat
     4300002: SlopeUp
     4300004: PlateauMiddle
@@ -72,7 +93,10 @@ ModelImporter:
     4300016: C2
     4300018: F2
     4300020: F1
+<<<<<<< refs/remotes/origin/master
     4300022: SlopeDown
+=======
+>>>>>>> Star Catchers
     9500000: //RootNode
   materials:
     importMaterials: 1
