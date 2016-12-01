@@ -58,7 +58,13 @@ public class PlayerMotion : MonoBehaviour {
 	//Funtions for each motion control, as tied to different key inputs, to run in Update
 	void RunControl()
 	{
-		transform.Translate (Input.GetAxis ("Horizontal") * speed * Time.deltaTime, 0, 0);
+		//transform.Translate (Input.GetAxis ("Horizontal") * speed * Time.deltaTime, 0, 0);
+
+		if (Input.GetKey ("left")) {
+			transform.Translate (-speed * Time.deltaTime, 0, 0);
+		} else if (Input.GetKey ("right")) {
+			transform.Translate (speed * Time.deltaTime, 0, 0);
+		}
 
 		if (!Input.GetKey ("left") && !Input.GetKey("right")) {
 			anim.SetBool ("IsRunning", false);

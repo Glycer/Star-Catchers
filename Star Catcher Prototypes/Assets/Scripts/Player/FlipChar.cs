@@ -17,10 +17,10 @@ public class FlipChar : MonoBehaviour {
 	void Flip()
 	{
 		if (GetComponent<SpriteRenderer> () != null) {
-			if (Input.GetKeyDown ("left")) {
+			if (Input.GetKey ("left")) {
 				sprite.flipX = true;
 				facingX = -1;
-			} else if (Input.GetKeyDown ("right")) {
+			} else if (Input.GetKey ("right")) {
 				sprite.flipX = false;
 				facingX = 1;
 			}
