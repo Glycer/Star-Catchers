@@ -11,7 +11,7 @@ public class Sprint : MonoBehaviour {
 	*/
 	public Text meter;
 	public Image star;
-	public bool canSprint = false;
+	//public bool canSprint = false;
 
 	private int sprintNum = 0;
 	private int sprintMax = 50;
@@ -65,6 +65,7 @@ public class Sprint : MonoBehaviour {
 	{
 		GetComponent<PlayerMotion> ().speed = boostSpeed;
 		meter.text = "";
+		//canSprint = false;
 
 		while (sprintNum > 0) {
 			sprintNum -= 2;
@@ -83,7 +84,7 @@ public class Sprint : MonoBehaviour {
 	void IsMaxed()
 	{
 		if (sprintNum == sprintMax) {
-			canSprint = true;
+			//canSprint = true;
 			meter.text = "Sprint!";
 		}
 	}

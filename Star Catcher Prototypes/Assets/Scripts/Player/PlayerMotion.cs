@@ -84,7 +84,7 @@ public class PlayerMotion : MonoBehaviour {
 
 	void SprintControl()
 	{
-		if (GetComponent<Sprint>().canSprint == true && Input.GetKeyDown (KeyCode.LeftShift)) {
+		if (/*GetComponent<Sprint>().canSprint == true &&*/ Input.GetKeyDown (KeyCode.LeftShift)) {
 			StartSprint ();
 		} else if (Input.GetKeyUp (KeyCode.LeftShift)) {
 			ResetSprint ();
