@@ -47,7 +47,7 @@ public class BattleSprite : MonoBehaviour, IAttack, IDamageable {
 	/// <summary>
 	/// Checks to see if this BattleSprite has been killed
 	/// </summary>
-	public void KillCheck()
+	public virtual void KillCheck()
 	{
 		if (health <= 0) {
 			TargetingSystem.Kill (this);

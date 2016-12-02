@@ -25,6 +25,9 @@ public class TargetingSystem : MonoBehaviour {
 		Invoke ("DelayedStart", 1);
 	}
 
+	/// <summary>
+	/// For things that need to be done after other scripts have initialized.
+	/// </summary>
 	private void DelayedStart()
 	{
 		//Identify Player Character and move them to the top of the good List

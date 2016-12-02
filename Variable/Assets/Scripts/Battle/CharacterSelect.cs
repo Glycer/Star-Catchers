@@ -19,7 +19,7 @@ public class CharacterSelect : MonoBehaviour {
 	{
 		string _charName = dropDown.itemText.text;
 
-		//This could be done better with a dictionary.
+		//Note: make this a dictionary later
 		switch (_charName) {
 		case "Ivan":
 			charImage.sprite = lstChars [0];
