@@ -24,6 +24,8 @@ public class BattleSprite : MonoBehaviour, IAttack, IDamageable {
 		txtHealth = GetComponentInChildren<Text> ();
 		health = int.Parse (txtHealth.text);
 		TargetingSystem.SetTargets (this);
+
+		StartCoroutine (FillerCoroutine());
 	}
 
 	/// <summary>
@@ -67,6 +69,17 @@ public class BattleSprite : MonoBehaviour, IAttack, IDamageable {
 
 			txtHealth.text = health.ToString ();
 			yield return new WaitForSeconds (DAMAGE_DELAY);
+		}
+	}
+
+	protected IEnumerator FillerCoroutine()
+	{
+		while (health < 0) {
+			health--;
+			txtHealth.text = health.ToString ();
+			yield return new WaitForSeconds (1);
+			health++;
+			txtHealth.text = health.ToString ();
 		}
 	}
 }
