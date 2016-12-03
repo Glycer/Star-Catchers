@@ -4,7 +4,6 @@ using System.Collections;
 public class LogoFade : MonoBehaviour {
 
 	public const int HOLD = 3;
-	public AudioSource bgm;
 
 	// Use this for initialization
 	void Start () {
@@ -27,7 +26,6 @@ public class LogoFade : MonoBehaviour {
 		yield return new WaitForSeconds (HOLD);
 		GetComponent<WhiteInOut> ().enabled = true;
 		GetComponent<WhiteInOut> ().FadeIn();
-		bgm.Play ();
 	}
 
 	void Unsubscribe()
