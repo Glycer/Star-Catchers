@@ -13,10 +13,16 @@ public class StarSpin : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Collection.LoseStars += FlashRed;
 		spinSpeed = new Vector3 (0, 0, SPIN_Z);
 		rectTransform = GetComponent<RectTransform> ();
 
 		StartCoroutine (Spin());
+	}
+
+	void FlashRed(int _unused)
+	{
+		GetComponent<Animator> ().Play ("FlashRed");
 	}
 
 	IEnumerator Spin()
@@ -27,5 +33,10 @@ public class StarSpin : MonoBehaviour {
 
 			yield return new WaitForSeconds (SPIN_DELAY);
 		}
+	}
+
+	void Unsubscribe()
+	{
+		Collection.LoseStars -= FlashRed;
 	}
 }
