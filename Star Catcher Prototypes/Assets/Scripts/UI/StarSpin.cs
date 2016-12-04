@@ -22,7 +22,6 @@ public class StarSpin : MonoBehaviour {
 		rectTransform = GetComponent<RectTransform> ();
 		anim = GetComponent<Animator> ();
 
-		Debug.Log (spinSpeed.z);
 		StartCoroutine (Spin());
 	}
 
