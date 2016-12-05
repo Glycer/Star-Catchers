@@ -6,7 +6,7 @@ public class WolfCycler : MonoBehaviour {
 	public WolfAI wolf;
 
 	const int SPAWN_CHANCE = 2;
-	const int SPAWN_DELAY = 10;
+	const int SPAWN_DELAY = 20;
 	const int LIFESPAN = 4;
 
 	// Use this for initialization
