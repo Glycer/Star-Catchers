@@ -19,8 +19,9 @@ public class SetRating : MonoBehaviour {
 
 		ratings = new Dictionary<int, string> {
 			{ (int)baseNum, "CRAP" },
-			{ (int)baseNum * 2, "MEDIOCRE" },
+			{ (int)baseNum * 2, "SUB-PAR" },
 			{ (int)baseNum * 3, "DECENT" },
+			{ (int)baseNum * 4, "RESPECTABLE" },
 			{ (int)baseNum * 5, "EXCELLENT" },
 		};
 
@@ -30,7 +31,7 @@ public class SetRating : MonoBehaviour {
 	string Set(int _score)
 	{
 		foreach (var pair in ratings) {
-			if (_score <= pair.Key) {
+			if (_score < pair.Key) {
 				return pair.Value;
 			}
 		}
