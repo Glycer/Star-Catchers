@@ -17,6 +17,7 @@ public class StarSpin : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Collection.LoseStars += FlashRed;
+		LevelTimer.EndLevel += Unsubscribe;
 		spin_z = (TIME_MOD / StaticVariables.levelDuration) * BASE_SPIN_Z;
 		spinSpeed = new Vector3 (0, 0, spin_z);
 		rectTransform = GetComponent<RectTransform> ();

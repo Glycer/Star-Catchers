@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\Player\JumpScript.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMotion.cs" />
      <Compile Include="Assets\Scripts\Player\Sprint.cs" />
+     <Compile Include="Assets\Scripts\Sound\Ding.cs" />
      <Compile Include="Assets\Scripts\Sound\MainMenuBGM.cs" />
      <Compile Include="Assets\Scripts\Sound\SlideControl.cs" />
      <Compile Include="Assets\Scripts\Sound\VolumeControl.cs" />
