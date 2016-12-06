@@ -23,7 +23,7 @@ public class StarSpin : MonoBehaviour {
 		rectTransform = GetComponent<RectTransform> ();
 		anim = GetComponent<Animator> ();
 
-		StartCoroutine (Spin());
+		StartCoroutine (SpinBySprint());
 	}
 
 	void FlashRed(int _unused)
@@ -37,6 +37,16 @@ public class StarSpin : MonoBehaviour {
 		for (float i = 0; i < StaticVariables.levelDuration; i += SPIN_DELAY) {
 			rectTransform.Rotate (spinSpeed);
 			spinSpeed.z = spin_z * tracker.starsNum;
+
+			yield return new WaitForSeconds (SPIN_DELAY);
+		}
+	}
+
+	IEnumerator SpinBySprint()
+	{
+		for (float i = 0; i < StaticVariables.levelDuration; i += SPIN_DELAY) {
+			rectTransform.Rotate (spinSpeed);
+			spinSpeed.z = spin_z * Sprint.sprintNum / 2;
 
 			yield return new WaitForSeconds (SPIN_DELAY);
 		}

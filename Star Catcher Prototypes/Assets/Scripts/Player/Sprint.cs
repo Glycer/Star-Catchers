@@ -9,14 +9,14 @@ public class Sprint : MonoBehaviour {
 	 * an integer representing the current amount of sprint energy; an integer representing the sprint energy cap;
 	 * and two floats to control how quickly sprint energy passively fills or drains when active.
 	*/
-	public Text meter;
 	public Image star;
 	//public bool canSprint = false;
 
-	private int sprintNum = 0;
+	public static int sprintNum = 0;
 	private int sprintMax = 50;
 	private float fillDelay = .1f;
 	private float drainDelay = .05f;
+	private int drainNum = 3;
 
 	private float originSpeed;
 	private float boostSpeed;
@@ -33,7 +33,6 @@ public class Sprint : MonoBehaviour {
 
 		tempCol = new Color (1, 1, 1, 0);
 		star.color = tempCol;
-		meter.text = "";
 	}
 
 	void Boost()
@@ -64,11 +63,10 @@ public class Sprint : MonoBehaviour {
 	IEnumerator ChannelSprint()
 	{
 		GetComponent<PlayerMotion> ().speed = boostSpeed;
-		meter.text = "";
 		//canSprint = false;
 
 		while (sprintNum > 0) {
-			sprintNum -= 2;
+			sprintNum -= drainNum;
 			UpdateStarTransparency ();
 			yield return new WaitForSeconds (drainDelay);
 		}
@@ -85,7 +83,6 @@ public class Sprint : MonoBehaviour {
 	{
 		if (sprintNum == sprintMax) {
 			//canSprint = true;
-			meter.text = "Sprint!";
 		}
 	}
 
