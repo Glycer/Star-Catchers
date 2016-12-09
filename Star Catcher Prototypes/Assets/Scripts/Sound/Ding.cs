@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Ding : MonoBehaviour {
+
+	public List<AudioClip> clips;
 
 	AudioSource aud;
 
@@ -16,6 +19,13 @@ public class Ding : MonoBehaviour {
 
 	void PlayDing()
 	{
+		aud.clip = clips[0];
+		aud.Play ();
+	}
+
+	public void PlayHit()
+	{
+		aud.clip = clips[1];
 		aud.Play ();
 	}
 

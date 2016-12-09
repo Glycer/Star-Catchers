@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class SetRating : MonoBehaviour {
 
-	const float DIVISOR = 6;
+	public const float DIVISOR = 6;
 
-	private float baseNum;
+	public static float baseNum;
 
-	private Dictionary<int, string> ratings;
+	Dictionary<int, string> ratings;
 	private Text txt;
 
 	// Use this for initialization
@@ -19,7 +19,7 @@ public class SetRating : MonoBehaviour {
 
 		ratings = new Dictionary<int, string> {
 			{ (int)baseNum, "CRAP" },
-			{ (int)baseNum * 2, "SUB-PAR" },
+			{ (int)baseNum * 2, "UNFORTNUATE" },
 			{ (int)baseNum * 3, "DECENT" },
 			{ (int)baseNum * 4, "RESPECTABLE" },
 			{ (int)baseNum * 5, "EXCELLENT" },

@@ -12,11 +12,13 @@ public class Sprint : MonoBehaviour {
 	public Image star;
 	//public bool canSprint = false;
 
+	/*
 	public static int sprintNum = 0;
 	private int sprintMax = 50;
 	private float fillDelay = .1f;
 	private float drainDelay = .05f;
 	private int drainNum = 3;
+	*/
 
 	private float originSpeed;
 	private float boostSpeed;
@@ -27,14 +29,22 @@ public class Sprint : MonoBehaviour {
 		originSpeed = GetComponent<PlayerMotion> ().speed;
 		boostSpeed = GetComponent<PlayerMotion> ().speed * 2.5f;
 
-		PlayerMotion.StartSprint += Boost;
-		PlayerMotion.ResetSprint += Stop;
-		LevelTimer.EndLevel += Unsubscribe;
-
 		tempCol = new Color (1, 1, 1, 0);
 		star.color = tempCol;
 	}
 
+	public void Boost()
+	{
+		GetComponent<PlayerMotion> ().speed = boostSpeed;
+	}
+
+	//Reset speed whenever sprinting ceases
+	public void ResetSpeed()
+	{
+		GetComponent<PlayerMotion> ().speed = originSpeed;
+	}
+
+	/*
 	void Boost()
 	{
 		StopAllCoroutines ();
@@ -73,12 +83,6 @@ public class Sprint : MonoBehaviour {
 		ResetSpeed ();
 	}
 
-	//Reset speed whenever sprinting ceases
-	void ResetSpeed()
-	{
-		GetComponent<PlayerMotion> ().speed = originSpeed;
-	}
-
 	void IsMaxed()
 	{
 		if (sprintNum == sprintMax) {
@@ -97,4 +101,5 @@ public class Sprint : MonoBehaviour {
 		PlayerMotion.StartSprint -= Boost;
 		PlayerMotion.ResetSprint -= Stop;
 	}
+	*/
 }

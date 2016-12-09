@@ -1,8 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/Sprint.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Environment/Stars/TrackStars.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player/Sprint.cs" Line="19" Column="26" />
+      <File FileName="Assets/Scripts/Player/Sprint.cs" Line="22" Column="2" />
+      <File FileName="Assets/Scripts/UI/Game/StarSpin.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/UI/SetRating.cs" Line="10" Column="29" />
+      <File FileName="Assets/Scripts/Environment/Stars/TrackStars.cs" Line="84" Column="14" />
+      <File FileName="Assets/Scripts/Sound/Ding.cs" Line="13" Column="38" />
+      <File FileName="Assets/Scripts/Enemy/WolfAttack.cs" Line="19" Column="60" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

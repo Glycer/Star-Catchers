@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: 69bedbc0d2b7a45df88229a0cab0c8b1
+timeCreated: 1481220106
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: C1
+    100002: C2
+    100004: C3
+    100006: C4
+    100008: Chasm
+    100010: F1
+    100012: F2
+    100014: F3
+    100016: F4
+    100018: Flat
+    100020: Floating
+    100022: I1
+    100024: I2
+    100026: I3
+    100028: I4
+    100030: I5
+    100032: I6
+    100034: I7
+    100036: Island
+    100038: PlateauLeft
+    100040: PlateauMiddle
+    100042: SlopeDown
+    100044: SlopeUp
+    100046: //RootNode
+    400000: C1
+    400002: C2
+    400004: C3
+    400006: C4
+    400008: Chasm
+    400010: F1
+    400012: F2
+    400014: F3
+    400016: F4
+    400018: Flat
+    400020: Floating
+    400022: I1
+    400024: I2
+    400026: I3
+    400028: I4
+    400030: I5
+    400032: I6
+    400034: I7
+    400036: Island
+    400038: PlateauLeft
+    400040: PlateauMiddle
+    400042: SlopeDown
+    400044: SlopeUp
+    400046: //RootNode
+    2300000: C1
+    2300002: C2
+    2300004: C3
+    2300006: C4
+    2300008: F1
+    2300010: F2
+    2300012: F3
+    2300014: F4
+    2300016: Flat
+    2300018: I1
+    2300020: I2
+    2300022: I3
+    2300024: I4
+    2300026: I5
+    2300028: I6
+    2300030: I7
+    2300032: PlateauLeft
+    2300034: PlateauMiddle
+    2300036: SlopeDown
+    2300038: SlopeUp
+    3300000: C1
+    3300002: C2
+    3300004: C3
+    3300006: C4
+    3300008: F1
+    3300010: F2
+    3300012: F3
+    3300014: F4
+    3300016: Flat
+    3300018: I1
+    3300020: I2
+    3300022: I3
+    3300024: I4
+    3300026: I5
+    3300028: I6
+    3300030: I7
+    3300032: PlateauLeft
+    3300034: PlateauMiddle
+    3300036: SlopeDown
+    3300038: SlopeUp
+    4300000: Flat
+    4300002: SlopeUp
+    4300004: PlateauMiddle
+    4300006: I1
+    4300008: I2
+    4300010: I3
+    4300012: I4
+    4300014: I5
+    4300016: I6
+    4300018: I7
+    4300020: PlateauLeft
+    4300022: C1
+    4300024: C2
+    4300026: C3
+    4300028: C4
+    4300030: F2
+    4300032: F1
+    4300034: F3
+    4300036: F4
+    4300038: SlopeDown
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

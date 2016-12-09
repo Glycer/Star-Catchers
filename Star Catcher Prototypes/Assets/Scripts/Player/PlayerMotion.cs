@@ -6,8 +6,6 @@ public class PlayerMotion : MonoBehaviour {
 
 	public delegate void MotionHandler();
 	public static MotionHandler ChangeDirection;
-	public static MotionHandler StartSprint;
-	public static MotionHandler ResetSprint;
 
 	//Variables for basic motion
 	public float speed;
@@ -27,8 +25,6 @@ public class PlayerMotion : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		initPos = transform.position;
 		jumpScript = GetComponent<JumpScript> ();
-
-		StartCoroutine (GetComponent<Sprint> ().RefillSprint ());
 	}
 
 	// Update is called once per frame
@@ -39,7 +35,7 @@ public class PlayerMotion : MonoBehaviour {
 
 		RunControl ();
 		JumpControl ();
-		SprintControl ();
+		//SprintControl ();
 	}
 
 	//Re-enables jumping after hitting the ground
@@ -58,8 +54,6 @@ public class PlayerMotion : MonoBehaviour {
 	//Funtions for each motion control, as tied to different key inputs, to run in Update
 	void RunControl()
 	{
-		//transform.Translate (Input.GetAxis ("Horizontal") * speed * Time.deltaTime, 0, 0);
-
 		if (Input.GetKey ("left")) {
 			transform.Translate (-speed * Time.deltaTime, 0, 0);
 		} else if (Input.GetKey ("right")) {
@@ -90,10 +84,10 @@ public class PlayerMotion : MonoBehaviour {
 
 	void SprintControl()
 	{
-		if (/*GetComponent<Sprint>().canSprint == true &&*/ Input.GetKeyDown (KeyCode.LeftShift)) {
-			StartSprint ();
+		if (Input.GetKeyDown (KeyCode.LeftShift)) {
+			GetComponent<Sprint>().Boost();
 		} else if (Input.GetKeyUp (KeyCode.LeftShift)) {
-			ResetSprint ();
+			GetComponent<Sprint>().ResetSpeed();
 		}
 	}
 

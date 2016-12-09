@@ -7,6 +7,8 @@ public class TrackStars : MonoBehaviour {
 	public int starsNum;
 	private Text starsNumTxt;
 
+	private int mileMarker;
+
 	// Use this for initialization
 	void Start () {
 		Collection.CollectStar += IncrementStars;
@@ -16,6 +18,7 @@ public class TrackStars : MonoBehaviour {
 
 		starsNumTxt = GetComponent<Text> ();
 		starsNum = 0;
+		mileMarker = (int)StaticVariables.levelDuration / 6;
 		UpdateStars ();
 	}
 
@@ -48,6 +51,9 @@ public class TrackStars : MonoBehaviour {
 		if (starsNumTxt != null) {
 			starsNumTxt.text = starsNum.ToString();
 		}
+		if (starsNum != 0 && starsNum % mileMarker == 0) {
+			StartCoroutine (DingDingDing());
+		}
 	}
 
 	void Unsubscribe()
@@ -66,5 +72,17 @@ public class TrackStars : MonoBehaviour {
 	{
 		int _stars = Random.Range (3, 6);
 		return _stars;
+	}
+
+	IEnumerator DingDingDing()
+	{
+		AudioSource aud = GetComponent<AudioSource> ();
+
+		for (int i = 0; i < 3; i++) {
+			aud.Play ();
+			yield return new WaitForSeconds(.15f);
+			if (i != 2)
+				aud.Stop ();
+		}
 	}
 }

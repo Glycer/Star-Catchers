@@ -16,6 +16,7 @@ public class WolfAttack : MonoBehaviour {
 		Collection.LoseStars (TrackStars.LostStars());
 		sprayEffect = Instantiate (Resources.Load("2D/Effects/SprayEffect")) as GameObject;
 		sprayEffect.transform.position = col.transform.position;
+		col.transform.GetComponentInChildren<Ding> ().PlayHit ();
 		//anim.Play("Attack");
 		//Attack(col.gameObject);
 	}
