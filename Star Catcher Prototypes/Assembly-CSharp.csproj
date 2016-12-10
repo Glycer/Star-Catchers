@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Environment\Cycling\UpdateCloudCol.cs" />
      <Compile Include="Assets\Scripts\Environment\Stars\Collection.cs" />
      <Compile Include="Assets\Scripts\Environment\Stars\FireStar.cs" />
+     <Compile Include="Assets\Scripts\Environment\Stars\FlashDing.cs" />
      <Compile Include="Assets\Scripts\Environment\Stars\SpawnStars.cs" />
      <Compile Include="Assets\Scripts\Environment\Stars\StarBehaviour.cs" />
      <Compile Include="Assets\Scripts\Environment\Stars\StarCoreBehaviour.cs" />

@@ -5,9 +5,11 @@ using UnityEngine.UI;
 public class TrackStars : MonoBehaviour {
 
 	public int starsNum;
+	public StarSpin starSpin;
 	private Text starsNumTxt;
+	private FlashDing flashDing;
 
-	private int mileMarker;
+	public int mileMarker;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +19,7 @@ public class TrackStars : MonoBehaviour {
 		LevelTimer.EndLevel += Unsubscribe;
 
 		starsNumTxt = GetComponent<Text> ();
+		flashDing = GetComponent<FlashDing> ();
 		starsNum = 0;
 		mileMarker = (int)StaticVariables.levelDuration / 6;
 		UpdateStars ();
@@ -30,14 +33,6 @@ public class TrackStars : MonoBehaviour {
 
 	void LoseStars(int _numStars)
 	{
-		/*int rand = Random.Range (1, starsNum / 2);
-
-		if (starsNum > 0) {
-			starsNum -= rand;
-			UpdateStars ();
-		}
-		*/
-
 		if (starsNum > 0) {
 			starsNum -= _numStars;
 			starsNum = (starsNum >= 0) ? starsNum : 0;
@@ -52,7 +47,9 @@ public class TrackStars : MonoBehaviour {
 			starsNumTxt.text = starsNum.ToString();
 		}
 		if (starsNum != 0 && starsNum % mileMarker == 0) {
-			StartCoroutine (DingDingDing());
+			//flashDing.CheckCol (mileMarker / 10);
+			flashDing.RunDing ();
+			starSpin.FlashBlue ();
 		}
 	}
 
@@ -72,17 +69,5 @@ public class TrackStars : MonoBehaviour {
 	{
 		int _stars = Random.Range (3, 6);
 		return _stars;
-	}
-
-	IEnumerator DingDingDing()
-	{
-		AudioSource aud = GetComponent<AudioSource> ();
-
-		for (int i = 0; i < 3; i++) {
-			aud.Play ();
-			yield return new WaitForSeconds(.15f);
-			if (i != 2)
-				aud.Stop ();
-		}
 	}
 }
