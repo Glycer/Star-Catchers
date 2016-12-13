@@ -1,7 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Sound/VolumeControl.cs">
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/Swirl.cs">
+>>>>>>> Stashed changes
 =======
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/Swirl.cs">
 >>>>>>> Stashed changes
@@ -11,6 +15,12 @@
       <File FileName="Assets/Scripts/Environment/Stars/TrackStars.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Environment/Stars/FlashDing.cs" Line="1" Column="1" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+      <File FileName="Assets/Scripts/Environment/Stars/SpawnStars.cs" Line="47" Column="53" />
+      <File FileName="Assets/Scripts/Player/Swirl.cs" Line="16" Column="57" />
+      <File FileName="Assets/Scripts/Environment/Cycling/LightningBump.cs" Line="23" Column="87" />
+>>>>>>> Stashed changes
 =======
       <File FileName="Assets/Scripts/Environment/Stars/SpawnStars.cs" Line="47" Column="53" />
       <File FileName="Assets/Scripts/Player/Swirl.cs" Line="16" Column="57" />
