@@ -36,12 +36,14 @@ public class SpawnStars : MonoBehaviour {
 		}
 	}
 
-	void SpawnStar(Transform spawner)
+	void SpawnStar(Transform _spawner)
 	{
-		GameObject star = Instantiate (stars[0]);
-		float rand = Random.Range (0, spawner.GetComponent<FireStar>().forceRange.x);
+		int _randStar = Random.Range (0, stars.Length);
 
-		star.transform.position = spawner.position;
-		star.GetComponent<Rigidbody> ().AddForce (rand, spawner.GetComponent<FireStar>().forceRange.y, 0);
+		GameObject star = Instantiate (stars[_randStar]);
+		float _rand = Random.Range (0, _spawner.GetComponent<FireStar>().forceRange.x);
+
+		star.transform.position = _spawner.position;
+		star.GetComponent<Rigidbody> ().AddForce (_rand, _spawner.GetComponent<FireStar>().forceRange.y, 0);
 	}
 }

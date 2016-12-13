@@ -1,11 +1,21 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Sound/VolumeControl.cs">
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/Swirl.cs">
+>>>>>>> Stashed changes
     <Files>
       <File FileName="Assets/Scripts/Sound/VolumeControl.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/UI/Game/StarSpin.cs" Line="69" Column="1" />
       <File FileName="Assets/Scripts/Environment/Stars/TrackStars.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Environment/Stars/FlashDing.cs" Line="1" Column="1" />
+<<<<<<< Updated upstream
+=======
+      <File FileName="Assets/Scripts/Environment/Stars/SpawnStars.cs" Line="47" Column="53" />
+      <File FileName="Assets/Scripts/Player/Swirl.cs" Line="16" Column="57" />
+      <File FileName="Assets/Scripts/Environment/Cycling/LightningBump.cs" Line="23" Column="87" />
+>>>>>>> Stashed changes
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
